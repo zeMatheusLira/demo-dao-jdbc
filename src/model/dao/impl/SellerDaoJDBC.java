@@ -85,6 +85,7 @@ public class SellerDaoJDBC implements SellerDao {
 
     @Override
     public void deleteById(Integer id) {
+
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement("DELETE FROM seller WHERE Id = ? ");
@@ -103,6 +104,7 @@ public class SellerDaoJDBC implements SellerDao {
 
     @Override
     public Seller findById(Integer id) {
+
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
@@ -150,7 +152,7 @@ public class SellerDaoJDBC implements SellerDao {
     }
 
     @Override
-    public List<Seller> findaAll() {
+    public List<Seller> findAll() {
 
         PreparedStatement st = null;
         ResultSet rs = null;
